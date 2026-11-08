@@ -1,0 +1,205 @@
+/* LENS LAB compact workspace layer — overrides are intentionally isolated from the base theme. */
+.app-layout {
+  grid-template-columns: minmax(0, 244px) minmax(0, 1fr);
+  min-height: calc(100vh - 72px);
+  transition: grid-template-columns .22s ease;
+}
+.app-layout.sidebar-collapsed { grid-template-columns: 0 minmax(0, 1fr); }
+.sidebar { position: relative; z-index: 30; overflow: visible; min-width: 0; }
+.sidebar > :not(.sidebar-toggle) { transition: opacity .14s ease, visibility .14s ease; }
+.sidebar-is-collapsed {
+  width: 0 !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  overflow: visible !important;
+}
+.sidebar-is-collapsed > :not(.sidebar-toggle) {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.sidebar-toggle {
+  position: absolute;
+  z-index: 40;
+  top: 17px;
+  right: -14px;
+  width: 28px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(139,211,212,.27);
+  border-left: 0;
+  border-radius: 0 9px 9px 0;
+  color: #a6dada;
+  background: linear-gradient(135deg, #1a2933, #101820);
+  box-shadow: 5px 5px 20px rgba(0,0,0,.25);
+  cursor: pointer;
+  transition: width .18s ease, color .18s ease, background .18s ease;
+}
+.sidebar-toggle:hover { width: 33px; color: #e3ffff; background: #203642; }
+.sidebar-is-collapsed .sidebar-toggle { left: 0; right: auto; width: 32px; border-left: 1px solid rgba(139,211,212,.27); border-radius: 0 8px 8px 0; }
+.main-content { min-width: 0; }
+
+/* Photo Lab uses the available viewport as an editing surface instead of a long document. */
+.app-layout.photo-lab-active { min-height: 0; height: calc(100dvh - 72px); overflow: hidden; }
+.main-content-photo-lab {
+  max-width: none;
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 13px 8px;
+}
+.main-content-photo-lab > .alert { flex: 0 0 auto; }
+.main-content-photo-lab .app-footer { display: none; }
+.photo-lab-compact {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 7px;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+.photo-compact-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 42px;
+  flex: 0 0 auto;
+  border-bottom: 1px solid var(--line);
+  padding: 0 2px 7px;
+}
+.photo-compact-title, .photo-header-actions { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.photo-lab-mark { width: 31px; height: 31px; display: grid; place-items: center; flex: 0 0 auto; border: 1px solid rgba(139,211,212,.25); border-radius: 8px; color: var(--cyan); background: linear-gradient(145deg, rgba(139,211,212,.12), rgba(139,211,212,.025)); }
+.photo-compact-title .section-kicker { margin-bottom: 2px; font-size: 7px; }
+.photo-compact-title h1 { margin: 0; font-size: clamp(16px, 1.5vw, 21px); line-height: 1.1; }
+.photo-compact-title h1 span { color: #718392; font-size: .62em; font-weight: 500; }
+.photo-header-actions { flex: 0 0 auto; }
+.photo-local-chip { padding: 6px 8px; font-size: 7px; }
+.compact-icon-button {
+  width: 29px; height: 29px; display: inline-grid; place-items: center;
+  border: 1px solid var(--line); border-radius: 5px; color: #9aabb9; background: rgba(255,255,255,.025); cursor: pointer;
+  transition: color .15s ease, border-color .15s ease, background .15s ease;
+}
+.compact-icon-button:hover:not(:disabled) { color: var(--cyan); border-color: rgba(139,211,212,.4); background: rgba(139,211,212,.08); }
+.compact-icon-button:disabled { opacity: .35; cursor: not-allowed; }
+.photo-upload-compact { min-height: 0; flex: 1 1 auto; margin: 0; padding: 18px; }
+.photo-upload-compact .photo-upload-icon { width: 48px; height: 48px; margin-bottom: 12px; }
+.photo-upload-compact h2 { font-size: 18px; }
+.photo-upload-compact p { margin-bottom: 13px; }
+.photo-upload-compact .photo-upload-meta { margin-top: 13px; }
+.photo-editor-shell { position: relative; flex: 1 1 auto; display: grid; grid-template-rows: auto minmax(0,1fr) auto; min-height: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: #0b1016; }
+.photo-editor-toolbar { min-height: 44px; display: grid; grid-template-columns: minmax(150px,1fr) auto minmax(200px,1fr); align-items: center; gap: 10px; padding: 5px 9px; border-bottom: 1px solid var(--line); background: linear-gradient(180deg, rgba(24,34,44,.94), rgba(15,22,29,.92)); }
+.photo-editor-toolbar .photo-file-info { min-width: 0; }
+.photo-file-info b { max-width: 260px; }
+.photo-toolbar-center { display: flex; justify-content: center; min-width: 0; }
+.photo-view-toggle { display: flex; align-items: center; padding: 2px; gap: 2px; border: 1px solid var(--line); border-radius: 6px; background: rgba(0,0,0,.2); }
+.photo-view-toggle button { display: inline-flex; align-items: center; gap: 5px; border: 0; border-radius: 4px; padding: 6px 8px; color: #899aa8; background: transparent; font: 7px var(--mono); letter-spacing: .06em; cursor: pointer; }
+.photo-view-toggle button.active { color: var(--cyan); background: rgba(139,211,212,.12); }
+.photo-toolbar-actions { justify-content: flex-end; flex-wrap: nowrap; gap: 5px; min-width: 0; }
+.photo-zoom-value { min-width: 40px; border: 0; background: transparent; color: #94a5b2; font: 8px var(--mono); cursor: pointer; }
+.photo-replace-button { padding: 7px 8px; font-size: 7px; }
+.photo-editor-body { display: grid; grid-template-columns: minmax(0,1fr) 286px; gap: 0; min-height: 0; position: relative; overflow: hidden; }
+.photo-editor-shell.inspector-closed .photo-editor-body { grid-template-columns: minmax(0,1fr); }
+.photo-stage-column { display: grid; grid-template-rows: minmax(0,1fr) auto auto; min-width: 0; min-height: 0; padding: 9px 10px 6px; overflow: hidden; }
+.photo-image-stage { position: relative; display: flex; align-items: center; justify-content: center; min-width: 0; min-height: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.07); border-radius: 5px; background: radial-gradient(ellipse at 50% 42%, #1b2731 0%, #0b1118 73%); }
+.photo-image-stage.drag-active { outline: 1px solid var(--cyan); outline-offset: -2px; }
+.photo-stage-image { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; transform-origin: center center; transition: transform .12s ease; }
+.photo-original-image { z-index: 1; }
+.photo-edited-canvas { z-index: 2; background: transparent; }
+.photo-render-hidden { opacity: 0; }
+.photo-wipe-overlay { will-change: clip-path; }
+.photo-stage-labels { position: absolute; z-index: 5; top: 9px; left: 9px; right: 9px; display: flex; justify-content: space-between; pointer-events: none; }
+.photo-stage-labels span { padding: 5px 7px; border: 1px solid rgba(255,255,255,.1); border-radius: 3px; color: #d4e1e8; background: rgba(5,9,13,.7); backdrop-filter: blur(8px); font: 7px var(--mono); letter-spacing: .08em; }
+.photo-wipe-handle { position: absolute; z-index: 4; top: 0; bottom: 0; width: 1px; background: #d5f5f2; box-shadow: 0 0 9px rgba(139,211,212,.8); pointer-events: auto; cursor: ew-resize; touch-action: none; }
+.photo-wipe-handle span { position: absolute; top: 50%; left: 50%; display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; transform: translate(-50%,-50%); border: 1px solid rgba(220,255,251,.65); border-radius: 50%; color: #061316; background: #a6e3df; box-shadow: 0 3px 14px rgba(0,0,0,.45); pointer-events: auto; cursor: ew-resize; }
+.photo-stage-busy { position: absolute; z-index: 7; right: 10px; bottom: 10px; padding: 6px 8px; border: 1px solid rgba(139,211,212,.22); border-radius: 4px; color: var(--cyan); background: rgba(8,15,20,.86); font: 8px var(--mono); }
+.photo-wipe-control { display: flex; align-items: center; gap: 10px; padding: 6px 4px 2px; color: #718392; font: 7px var(--mono); letter-spacing: .08em; }
+.photo-wipe-control input { flex: 1; min-width: 0; accent-color: var(--cyan); }
+.photo-stage-footer { display: flex; justify-content: space-between; gap: 10px; padding: 6px 3px 0; color: #687b89; font: 7px var(--mono); letter-spacing: .06em; }
+.photo-stage-footer span:last-child { color: #8ebdaa; }
+.photo-stage-footer i { display: inline-block; width: 3px; height: 3px; margin: 0 5px 1px; border-radius: 50%; background: #80c39e; }
+.photo-inspector { display: flex; flex-direction: column; gap: 9px; min-height: 0; overflow: auto; padding: 10px 11px 9px; border-left: 1px solid var(--line); background: linear-gradient(180deg, rgba(19,28,37,.94), rgba(12,18,25,.97)); overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #344653 transparent; }
+.photo-inspector-heading { display: flex; align-items: center; justify-content: space-between; gap: 9px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+.photo-inspector-heading .section-kicker { font-size: 7px; }
+.photo-inspector-heading h2 { margin: 2px 0 0; font: 600 14px var(--heading); }
+.photo-inspector-group { display: grid; gap: 4px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,.055); }
+.photo-group-title { display: flex; align-items: center; gap: 6px; margin-bottom: 2px; color: #8ba4ae; font: 7px var(--mono); letter-spacing: .1em; }
+.photo-group-title svg { color: var(--cyan); }
+.compact-control { gap: 4px; padding: 5px 0 4px; border-top: 0; }
+.compact-control > span { color: #9aaab6; font-size: 9px; }
+.compact-control b { font-size: 9px; }
+.compact-control input { height: 13px; margin: 0; }
+.photo-control-hint { margin: 1px 0 0; color: #718392; font-size: 8px; line-height: 1.4; }
+.photo-reset-action { display: inline-flex; align-items: center; gap: 5px; justify-self: start; margin-top: 2px; font-size: 7px; }
+.photo-recipe-select { width: 100%; min-width: 0; padding: 7px 8px; border: 1px solid var(--line); border-radius: 4px; color: #b9c8d2; background: #101820; font-size: 9px; }
+.photo-recipe-actions { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
+.photo-recipe-actions .primary-button, .photo-recipe-actions .subtle-button { min-height: 27px; padding: 6px 7px; font-size: 7px; }
+.danger-icon { color: #ca8585; }
+.photo-recipe-history { display: grid; gap: 4px; margin-top: 3px; padding: 7px; border: 1px solid rgba(255,255,255,.055); border-radius: 4px; background: rgba(0,0,0,.12); }
+.photo-recipe-history > span { color: #8295a3; font: 7px var(--mono); letter-spacing: .08em; }
+.photo-recipe-history > div { display: flex; justify-content: space-between; align-items: center; gap: 6px; color: #93a4b0; font-size: 8px; }
+.photo-recipe-history button { border: 0; color: var(--cyan); background: transparent; font: 7px var(--mono); cursor: pointer; }
+.photo-recipe-history button:disabled { opacity: .35; cursor: default; }
+.photo-recipe-history small { color: #687987; font-size: 7px; }
+.photo-inspector-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin-top: auto; padding-top: 5px; }
+.photo-inspector-bottom .primary-button, .photo-inspector-bottom .subtle-button { min-height: 30px; padding: 7px 6px; font-size: 7px; justify-content: center; }
+.photo-inspector-bottom .text-action { grid-column: 1 / -1; justify-self: start; font-size: 7px; }
+.photo-inspector-reopen { position: absolute; z-index: 10; right: 0; top: 50%; display: flex; align-items: center; gap: 5px; height: 38px; padding: 0 8px 0 5px; transform: translateY(-50%); border: 1px solid rgba(139,211,212,.3); border-right: 0; border-radius: 7px 0 0 7px; color: var(--cyan); background: #172630; cursor: pointer; }
+.photo-editor-status { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 24px; padding: 3px 9px; border-top: 1px solid var(--line); color: #7b8d9a; background: rgba(16,23,30,.94); font: 7px var(--mono); letter-spacing: .04em; }
+.photo-compact-alert { margin: 0; padding: 7px 9px; font-size: 8px; }
+.photo-compact-disclaimer { flex: 0 0 auto; margin: 0; min-height: 17px; font-size: 7px; line-height: 1.35; }
+
+@media (max-width: 1100px) {
+  .photo-editor-toolbar { grid-template-columns: minmax(120px,1fr) auto; }
+  .photo-toolbar-center { grid-column: 1 / -1; grid-row: 2; justify-content: flex-start; }
+  .photo-editor-toolbar { padding: 6px 8px; }
+  .photo-file-info b { max-width: 200px; }
+  .photo-inspector { padding: 8px; }
+}
+@media (max-width: 900px) {
+  .app-layout.photo-lab-active { height: auto; min-height: calc(100dvh - 62px); overflow: visible; }
+  .main-content-photo-lab { height: auto; max-height: none; min-height: calc(100dvh - 62px); overflow: visible; }
+  .photo-lab-compact { height: auto; overflow: visible; }
+  .photo-editor-shell { flex: 0 0 auto; min-height: min(850px, calc(100dvh - 155px)); height: calc(100dvh - 155px); }
+  .photo-editor-body { grid-template-columns: minmax(0,1fr); grid-template-rows: minmax(280px,1fr) minmax(170px,32vh); }
+  .photo-inspector { max-height: 32vh; border-left: 0; border-top: 1px solid var(--line); }
+  .photo-stage-column { min-height: 0; }
+  .sidebar-toggle { top: 7px; }
+  .app-layout.sidebar-collapsed .sidebar { height: 0; min-height: 0; }
+  .app-layout.sidebar-collapsed .sidebar-toggle { position: fixed; top: 69px; left: 8px; }
+}
+@media (max-width: 680px) {
+  .main-content-photo-lab { padding: 8px; }
+  .photo-compact-header { min-height: 38px; }
+  .photo-compact-title h1 span { display: none; }
+  .photo-local-chip { display: none; }
+  .photo-editor-shell { height: auto; min-height: 0; overflow: visible; }
+  .photo-editor-toolbar { grid-template-columns: minmax(0,1fr) auto; }
+  .photo-toolbar-center { grid-column: 1 / -1; grid-row: 2; }
+  .photo-editor-body, .photo-editor-shell.inspector-open .photo-editor-body { display: grid; grid-template-columns: minmax(0,1fr); grid-template-rows: minmax(310px, 48dvh) auto; overflow: visible; }
+  .photo-stage-column { min-height: 310px; }
+  .photo-inspector { max-height: 42dvh; border-left: 0; border-top: 1px solid var(--line); overflow: auto; }
+  .photo-inspector-reopen { position: sticky; right: 0; top: 0; justify-self: end; transform: none; }
+  .photo-editor-status { align-items: flex-start; flex-direction: column; gap: 3px; padding: 7px; }
+  .photo-stage-footer { font-size: 6px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-layout, .sidebar-toggle, .compact-icon-button, .photo-stage-image { transition: none !important; }
+}
+.photo-image-stage.is-zoomed { cursor: grab; }
+.photo-image-stage.is-panning { cursor: grabbing; }
+.photo-image-stage.is-zoomed .photo-stage-image { user-select: none; -webkit-user-drag: none; }
+.photo-image-stage.is-panning .photo-stage-image { transition: none; }
+.app-layout.sidebar-collapsed .main-content-photo-lab { padding-left: 42px; }
+
+/* Photo Lab expansion: analysis, geometry, mask and responsive lens comparison. */
+.photo-metadata-grid{display:grid;grid-template-columns:78px minmax(0,1fr);gap:4px 8px;font-size:9px;align-items:center}.photo-metadata-grid span{color:#8496a4}.photo-metadata-grid b{min-width:0;overflow-wrap:anywhere;color:#dce5eb;font-weight:550}.photo-histogram{display:grid;gap:4px;margin-top:7px}.photo-histogram svg{width:100%;height:66px;background:linear-gradient(180deg,rgba(255,255,255,.025),transparent);border-bottom:1px solid rgba(255,255,255,.12)}.photo-fingerprint{display:block;color:#7e929f;font:8px var(--mono);overflow-wrap:anywhere;margin-top:5px}.photo-recipe-actions .subtle-button{min-height:28px;padding:5px 7px;font-size:7px}.photo-control-hint{font-size:8px;line-height:1.45;color:#81919d;margin:2px 0 5px}.photo-editor-toolbar .photo-replace-button:disabled{opacity:.5;cursor:wait}
+.lens-comparison-page{max-width:1180px}.lens-compare-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding:14px;border:1px solid var(--line);border-radius:9px;background:rgba(18,27,36,.7);margin-bottom:16px}.lens-compare-controls label{display:grid;gap:8px;color:#92a4b1;font:9px var(--mono);letter-spacing:.06em}.lens-compare-controls label b{color:#e6eef4;font:600 16px var(--heading);letter-spacing:0}.lens-compare-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.lens-compare-card{display:grid;gap:12px}.lens-compare-card select{width:100%;min-width:0;background:#101820;color:#e8eef2;border:1px solid var(--line);border-radius:5px;padding:9px;font:11px var(--heading)}.lens-spec-hero{display:flex;align-items:center;gap:12px;padding:15px;border-radius:7px;background:linear-gradient(120deg,rgba(101,188,190,.12),rgba(255,255,255,.02));color:var(--cyan)}.lens-spec-hero div{display:grid;gap:3px}.lens-spec-hero b{font:600 25px var(--heading);color:#f0f5f8}.lens-spec-hero span{font-size:9px;color:#8da0ad}.lens-metric{display:flex;justify-content:space-between;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.07);padding:8px 0;color:#91a1ad;font-size:10px}.lens-metric span{display:flex;align-items:center;gap:6px}.lens-metric b{color:#e6edf2;font:600 12px var(--mono)}.lens-limits{font-size:9px;color:#7f919e;line-height:1.5}.lens-compare-note{display:flex;align-items:flex-start;gap:9px;margin-top:14px}
+@media(max-width:760px){.lens-compare-controls{grid-template-columns:1fr}.lens-compare-grid{grid-template-columns:1fr}.photo-metadata-grid{grid-template-columns:74px minmax(0,1fr)}}
