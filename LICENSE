@@ -19,3 +19,34 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+Personal Reference Repository
+This repository is maintained as a personal reference archive for learning, research, experimentation, and future reference. It is not intended to be presented as a commercial product, service, or official distribution.
+
+Purpose
+The repository may contain personal notes, code examples, useful resources, documentation, links, experiments, and other materials collected or created for educational and reference purposes.
+
+Its purpose is to help organize knowledge and preserve useful references—not to claim ownership of other people's work or to imply endorsement of the materials included.
+
+Important Notice About the MIT License
+This repository currently includes the MIT License. The MIT License permits use, copying, modification, distribution, sublicensing, and sale of the software and associated materials covered by that license, provided the required copyright and permission notices are retained.
+
+Because of this, the repository's reference-only purpose is a statement of the maintainer's intent; it is not a legally enforceable non-commercial restriction under the standard MIT License. The README does not override or amend the LICENSE file.
+
+If a strict prohibition on commercial use is required, the standard MIT License is not suitable. The license would need to be replaced with or supplemented by appropriately drafted terms before distribution. A license that prohibits commercial use is generally not considered an open-source license under the Open Source Initiative's definition.
+
+Third-Party Materials
+Some materials may be included or referenced for educational and research purposes. Unless explicitly stated otherwise:
+
+The original authors or rights holders retain ownership of their respective work.
+Third-party materials remain subject to their original licenses, terms, and copyright notices.
+The MIT License in this repository does not relicense third-party content that I do not own or have permission to license.
+Check the original source and its license before copying, modifying, redistributing, or using any referenced material.
+A link or reference does not imply affiliation with, sponsorship by, or endorsement from the original author or organization.
+Disclaimer
+Materials are provided for reference and educational purposes and are supplied "as is," without guarantees of accuracy, completeness, or suitability. Verify important information and dependencies against their original sources before relying on them.
+
+Attribution and Contributions
+Please preserve applicable copyright notices, license texts, author credits, and source links when using or sharing materials, as required by their respective licenses. Contributions or additions should identify their source and applicable license whenever possible.
+
+Maintained for personal learning and reference. The actual permissions and obligations for MIT-licensed materials are defined by the LICENSE file; third-party materials are governed by their own terms.
