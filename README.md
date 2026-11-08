@@ -1,232 +1,118 @@
-LENS LAB
+# LENS LAB 0.5.1
 
-Learn Photography. Experiment with Settings. Understand Every Shot.
+**Local-first photography simulation studio** — universal camera profiles, image-based teaching scenes, Photo Lab for personal photographs, versioned text presets, gallery, analysis, Academy, and local diagnostics.
 
-LENS LAB is a photography learning and simulation application designed to help users understand camera settings, explore photographic techniques, and practice image adjustments through an interactive workspace.
+## Windows quick start
 
-Whether you're learning photography for the first time or improving your understanding of manual camera controls, LENS LAB provides a place to experiment, observe results, and develop your skills without needing to operate a physical camera every time.
+1. Extract the complete ZIP to a writable folder.
+2. Double-click **`LENS-LAB.cmd`**.
+3. The launcher checks the system, skips compatible Node.js/npm, reconciles dependencies only when needed, generates a missing package lockfile, runs type checks/tests/build, starts the local app, opens the browser, and prints `DONE PROCESSING`.
+4. Keep the launcher window open while the application is in use. Press Enter in that window to stop it. A small port file under `logs/` keeps the same browser origin on future launches whenever that port is available, helping local preferences and IndexedDB data stay in place.
 
-About the Project
+The one-click launcher serves the optimized production build after verification. Use `npm run dev` only when actively developing the source. The first setup requires internet access if Node.js or npm dependencies are missing. The runtime installer uses the official Node.js LTS distribution and validates the MSI checksum. See [Installation](INSTALLATION.md).
 
-Photography involves more than simply pressing the shutter button. Understanding how aperture, shutter speed, ISO, focal length, exposure, and lighting work together is essential to producing better photographs.
+## Features
 
-LENS LAB aims to make these concepts easier to understand through practical experimentation and visual learning.
+- Studio: Manual, Aperture Priority, Shutter Priority and Program exposure modes.
+- Photo Practice: 25 real-world reference photographs across the five simulator scenes, each with creator/source credit, a practical exercise, and suggested starting ranges. Images stream from Unsplash and show a fallback when unavailable.
+- Universal camera body and lens profiles, with Canon EOS 3000D as the first reference profile; compare two lens profiles in the Lens Compare laboratory.
+- Image-scene simulator with EV100 exposure, depth-of-field estimates, motion/noise/lens approximations and live histogram.
+- Photo Lab: local JPEG/PNG/WebP import, non-destructive editing, crop/rotate/color tools, RGB histogram, EXIF metadata, SHA-256 identity, subject-mask background blur, undo/redo, batch ZIP export, and recipe versioning.
+- Presets: create, inspect, update, import, export and delete `.lenspreset.txt` files with immutable revision history.
+- Gallery: IndexedDB-backed captures and metadata.
+- Academy: concise lessons and exercises.
+- First-run visual guide: focused spotlight, dimmed surrounding interface, progress, keyboard dismissal, and step-by-step explanations. Completion/dismissal is remembered; users can replay the guide from Settings.
+- Settings: persistent Light/Dark workspace themes, adjustable synthesized UI sounds, motion controls, accessibility-aware guides (`?` replays the walkthrough), and Eco/Balanced/High preview quality.
+- Diagnostics: searchable browser logs plus Windows launcher and server log files.
 
-The application brings together camera simulation, image analysis, editing tools, and guided exercises in one workspace. It also includes a Photo Practice Library containing reference photographs that users can study and use as exercises.
+## Requirements
 
-The project is designed for general photography learning, with the Canon EOS 3000D serving as one of its reference camera profiles.
+- Windows 10/11 for the one-click launcher.
+- Node.js 22.12+, 24.x, or 26.x LTS; npm.
+- At least 1 GB free disk space for first installation and builds.
+- Modern browser with Canvas and IndexedDB support.
+- First install: internet connection if dependencies or Node.js are missing.
 
-Features
+macOS/Linux users can install a supported Node.js LTS release and use `bash scripts/install.sh`.
 
-Camera Simulation
+## Developer commands
 
-Experiment with aperture, shutter speed, and ISO.
-
-Explore exposure adjustments and their visual effects.
-
-Understand the relationship between camera settings.
-
-Compare different photographic settings and outcomes.
-
-Use camera profiles as references for learning.
-
-Photo Practice Library
-
-Five photographic scenes with five reference photographs each.
-
-25 photographs across different photography categories.
-
-Practice portraits, landscapes, night photography, action, and food or product photography.
-
-View learning objectives, difficulty levels, and suggested camera settings.
-
-Access the original photograph sources and creator credits.
-
-Image Editing and Analysis
-
-Crop and rotate images.
-
-Adjust vibrance, tint, and sharpening.
-
-Explore depth-aware blur using user-provided subject masks.
-
-Inspect image metadata and EXIF information.
-
-View RGB histograms and image characteristics.
-
-Generate image fingerprints using SHA-256.
-
-Workflow and Productivity
-
-Batch image processing and ZIP export.
-
-Save and manage reusable editing recipes.
-
-Compare lenses and photographic characteristics.
-
-Use responsive image previews with fallback rendering.
-
-Access local application settings and preferences.
-
-User Experience
-
-Light and dark themes.
-
-System-wide sound effects and adjustable volume.
-
-Smooth interface animations with reduced-motion support.
-
-Interactive onboarding and guided walkthroughs.
-
-Contextual visual highlighting to help users locate controls.
-
-Local fallbacks for supported features when optional capabilities are unavailable.
-
-Getting Started
-
-Requirements
-
-Windows 10 or later.
-
-Node.js and npm.
-
-A modern Chromium-based browser or compatible browser.
-
-An internet connection for online reference photographs in the Photo Practice Library.
-
-Installation
-
-Download or clone this repository.
-
-Extract the project, if downloaded as an archive.
-
-Open the project directory.
-
-Run the included Windows launcher:
-
-LENS-LAB.cmd
-
-The launcher handles the project's startup workflow and dependency checks.
-
-For development, install the dependencies:
-
+```bash
 npm install
-
-Then start the development environment using the project's configured scripts.
-
-Verification
-
-Run the project's verification script:
-
+npm run dev
+npm run typecheck
+npm test
+npm run build
 npm run verify
-
-To use the configured demo workflow:
-
 npm run demo
+```
 
-Photo Practice Library
+`npm run demo` builds the optimized app and serves the production preview locally on port 4173. The Windows launcher prints the selected local URL (ports 5173–5190). The macOS/Linux preview defaults to `http://127.0.0.1:4173`; `npm run dev` uses `http://127.0.0.1:5173`.
 
-The Photo Practice Library provides reference images for studying different photographic situations.
+## Documentation
 
-Scene
+- [User and feature guide](docs/USER-GUIDE.md)
+- [Architecture](docs/architecture.md)
+- [Simulation model](docs/simulation-model.md)
+- [Camera profiles and scenes](docs/profiles-and-scenes.md)
+- [Dependency and fallback policy](docs/DEPENDENCIES.md)
+- [Verification report and test boundaries](docs/VERIFICATION.md)
+- [Frontend experience and demo guide](docs/FRONTEND-UX.md)
+- [Changelog](CHANGELOG.md)
+- [Example preset](examples/portrait-soft-daylight.lenspreset.txt)
+- [Installation guide](INSTALLATION.md)
+- [Photo Practice photo credits, usage notes, and source links](PHOTO-PRACTICE.md)
 
-Learning Focus
+## Important limitations
 
-Portraits
+The included learning scenes are layered original illustrations. Photo Lab does not infer a complete exposure baseline from EXIF and cannot infer depth/motion data from ordinary photos. Uploaded-photo focus/motion effects are approximations. Exports are JPEG, not RAW/DNG; camera tethering is not implemented. See the user guide for the complete boundaries and troubleshooting instructions.
 
-Aperture, depth of field, and focus
+## Data and privacy
 
-Landscapes
+The app is local-first. Photo Lab does not upload your original photo. Captures, presets, and browser diagnostics are stored in IndexedDB; preferences and first-run guide state use LocalStorage. Browser site-data clearing can erase stored content. Export important photos and `.lenspreset.txt` presets regularly. Photo Practice loads its selected public reference images directly from Unsplash when that tab is opened; this sends normal image requests to Unsplash. Your imported Photo Lab originals, captures, presets, and settings are not uploaded to Unsplash.
 
-Exposure, sharpness, and composition
 
-Night Photography
+## 0.5.1 photo practice library
 
-ISO, shutter speed, and low-light exposure
+- Added a dedicated Photo Practice workspace with five online reference photographs for each of the existing five simulator scenes.
+- Added source/photographer credits, scene-specific learning objectives, per-photo exercises, difficulty labels, and suggested starting ranges that are explicitly not original EXIF.
+- Added direct links to each source photo, image-load fallbacks, and a guided-tour step. The simulator remains usable when image hosting is unavailable.
 
-Action & Motion
+## 0.5.0 frontend and interaction system
 
-Motion freezing and motion blur
+- Added coordinated Light Studio and Dark Studio themes. Theme choice is saved locally and applies to app surfaces, controls, form fields, overlays, and the workspace chrome while preserving photograph/viewfinder colors.
+- Rebuilt interface sound as a small local Web Audio synthesizer with distinct navigation, toggle, slider, focus, confirmation, warning, and shutter cues, plus a persisted master volume and global mute. No audio assets or network calls are required.
+- Added restrained page/panel entrance transitions, button feedback, and guided-spotlight breathing; app-level and OS reduced-motion settings disable motion.
+- Added a true transparent guide window with surrounding dim panels, responsive tooltip placement, progress indication, Escape-to-dismiss, focus handling, and a replay control in Settings.
+- Centralized sound dispatch at the application shell so buttons, navigation, switches, selectors, and range controls across the Studio, Photo Lab, Lens Compare, Presets, Gallery, Academy, and Diagnostics use consistent feedback.
+- Added `docs/FRONTEND-UX.md` with the design system, sound map, guide behavior, and demo checklist.
 
-Food & Products
+## 0.4.2 reliability hotfix
 
-Lighting, details, and color accuracy
+- Scales subject-mask crop coordinates to the mask's own pixel dimensions, so lower-resolution masks stay aligned with full-resolution photographs.
+- Renders the original comparison layer with the same crop, rotation, and preview geometry as the edited image.
+- Guards EXIF and SHA-256 results with the active photo-load generation; delayed analysis from an earlier photo cannot overwrite the current photo's metadata.
+- Uses private work canvases and sequence-checked commits for previews, preventing older worker jobs from overwriting newer edits.
+- Adds regression tests for normalized mask mapping and quarter-turn preview geometry.
 
-Each scene contains five photographs, giving users 25 reference images to explore.
+## 0.4.0 workspace improvements
 
-Note: Reference photographs are loaded from Unsplash. An internet connection is required to retrieve them. Photographer credits and original source links are provided in the application.
+Photo Lab now uses a compact viewport-fitted workspace. Its navigation sidebar can be collapsed and reopened with the visible chevron handle, while the editing inspector has an independent hide/show control. The image viewport supports original, edited, and draggable before/after wipe views, plus zoom and fit reset.
 
-Project Structure
+Photo Lab adjustments remain non-destructive. Shot recipes are saved locally in IndexedDB and can be exported or imported as readable `.lensrecipe.txt` bundles containing up to 50 immutable revision snapshots. Previous revisions can be restored as a new revision. The full-resolution export path is capped at 24 megapixels to bound memory use; larger images are resized and the status message reports the exported dimensions.
 
-The project is organized around its application source, static assets, configuration, and documentation.
+See `docs/PHOTO-LAB.md` for the editor layout, processing model, recipe format, and limitations. See `docs/USER-GUIDE.md` for using the application.
 
-LENS-LAB/
-├── public/              # Static files and public assets
-├── src/                 # Application source code
-├── tests/               # Automated tests, if included
-├── index.html           # Application entry point
-├── package.json         # Project dependencies and scripts
-├── package-lock.json    # Dependency lockfile
-├── README.md            # Project documentation
-├── CHANGELOG.md         # Version history
-└── INSTALLATION.md      # Installation instructions
 
-Development Philosophy
+## 0.4.0 image analysis and optics tools
 
-LENS LAB is developed with the following principles in mind:
+- Local EXIF reader for JPEG APP1, PNG eXIf, and WebP EXIF chunks. Only available fields are displayed; GPS is reported as present without exposing coordinates.
+- Live RGB and luminance histograms sampled from the edited preview.
+- Worker + OffscreenCanvas preview path with automatic main-thread Canvas fallback.
+- Optional depth-aware background blur using a user-provided aligned grayscale subject mask (white = subject, black = background); no automatic segmentation is claimed.
+- SHA-256 image fingerprints where Web Crypto is available; fingerprints can be embedded in portable shot recipes.
+- Crop, quarter-turn rotation, vibrance, tint, and sharpening controls.
+- Batch processing of up to 20 photos into one dependency-free ZIP archive, with a 150 MB output safety cap.
+- Lens Comparison workspace for focal length, field-of-view, aperture-limit, and depth-of-field estimates.
 
-Practical learning: Prioritize hands-on experimentation over passive reading.
-
-Accessibility: Keep tools understandable and approachable for beginners.
-
-Modularity: Keep features organized so they can be maintained and extended.
-
-Reliability: Include appropriate fallbacks and error handling where possible.
-
-User control: Allow users to customize their workspace and workflow.
-
-Transparency: Document limitations, dependencies, and external resources.
-
-Limitations
-
-LENS LAB is a learning and simulation environment. Its visual results should not be treated as exact reproductions of every physical camera, lens, sensor, or real-world shooting condition.
-
-The simulator does not replace a physical camera or guarantee identical photographic results.
-
-Online reference images require an internet connection. Some advanced processing capabilities may also depend on browser support and available system resources.
-
-Technology
-
-The project uses a web-based application architecture, with its implementation and dependencies documented in the project configuration.
-
-For the exact dependency versions and available scripts, refer to:
-
-package.json
-
-package-lock.json
-
-License
-
-This project is distributed under the MIT License.
-
-You may use, copy, modify, merge, publish, distribute, sublicense, and sell copies of the software, subject to the conditions of the MIT License.
-
-See the LICENSE file for the complete terms.
-
-Credits and Acknowledgments
-
-Unsplash — Source of the online photography references used in the Photo Practice Library.
-
-Photographers — Individual creators are credited alongside their respective photographs.
-
-Open-source contributors and maintainers of the libraries used by this project.
-
-Project Status
-
-Current Version: 0.5.1
-
-LENS LAB is an actively developing project. Features, interface elements, and internal implementations may change as development continues.
-
-Feedback, bug reports, and suggestions are welcome.
-
-LENS LAB — Learn the settings. Understand the light. Master the shot.
+See `docs/PHOTO-ANALYSIS.md` and `docs/LENS-COMPARISON.md` for limitations and usage.
