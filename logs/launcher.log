@@ -1,0 +1,512 @@
+﻿[2026-11-08T10:05:41.7880811+08:00] lens-lab@0.2.1 C:\Users\Ryan Caspillo\Downloads\lens-lab
++-- UNMET DEPENDENCY @types/node@26.6.6
++-- UNMET DEPENDENCY @types/react-dom@19.3.0
++-- UNMET DEPENDENCY @types/react@19.3.0
++-- UNMET DEPENDENCY @vitejs/plugin-react@6.2.1
++-- UNMET DEPENDENCY lucide-react@1.70.0
++-- UNMET DEPENDENCY react-dom@19.3.1
++-- UNMET DEPENDENCY react@19.3.1
++-- UNMET DEPENDENCY typescript@7.0.2
++-- UNMET DEPENDENCY vite@8.3.6
++-- UNMET DEPENDENCY vitest@5.1.0
+`-- UNMET DEPENDENCY zustand@5.1.0
+
+npm error code ELSPROBLEMS
+npm error missing: @types/node@26.6.6, required by lens-lab@0.2.1
+npm error missing: @types/react-dom@19.3.0, required by lens-lab@0.2.1
+npm error missing: @types/react@19.3.0, required by lens-lab@0.2.1
+npm error missing: @vitejs/plugin-react@6.2.1, required by lens-lab@0.2.1
+npm error missing: lucide-react@1.70.0, required by lens-lab@0.2.1
+npm error missing: react-dom@19.3.1, required by lens-lab@0.2.1
+npm error missing: react@19.3.1, required by lens-lab@0.2.1
+npm error missing: typescript@7.0.2, required by lens-lab@0.2.1
+npm error missing: vite@8.3.6, required by lens-lab@0.2.1
+npm error missing: vitest@5.1.0, required by lens-lab@0.2.1
+npm error missing: zustand@5.1.0, required by lens-lab@0.2.1
+npm error A complete log of this run can be found in: C:\Users\Ryan Caspillo\AppData\Local\npm-cache\_logs\2026-11-08T02_05_39_402Z-debug-0.log
+[2026-11-08T10:06:42.7688367+08:00] 
+added 48 packages in 1m
+[2026-11-08T10:06:45.9569413+08:00] lens-lab@0.2.1 C:\Users\Ryan Caspillo\Downloads\lens-lab
++-- @types/node@26.6.6
++-- @types/react-dom@19.3.0
++-- @types/react@19.3.0
++-- @vitejs/plugin-react@6.2.1
++-- lucide-react@1.70.0
++-- react-dom@19.3.1
++-- react@19.3.1
++-- typescript@7.0.2
++-- vite@8.3.6
++-- vitest@5.1.0
+`-- zustand@5.1.0
+
+[2026-11-08T10:06:51.6717876+08:00] 
+> lens-lab@0.2.1 verify
+> npm run typecheck && npm test && vite build
+
+
+> lens-lab@0.2.1 typecheck
+> tsc -b --pretty
+
+[96msrc/App.tsx[0m:[93m24[0m:[93m8[0m - [91merror[0m[90m TS2882: [0mCannot find module or type declarations for side-effect import of './styles.css'.
+
+[7m24[0m import "./styles.css";
+[7m  [0m [91m       ~~~~~~~~~~~~~~[0m
+
+[96msrc/main.tsx[0m:[93m5[0m:[93m8[0m - [91merror[0m[90m TS2882: [0mCannot find module or type declarations for side-effect import of './styles.css'.
+
+[7m5[0m import "./styles.css";
+[7m [0m [91m       ~~~~~~~~~~~~~~[0m
+
+
+Found 2 errors in 2 files.
+
+Errors  Files
+     1  src/App.tsx[90m:24[0m
+     1  src/main.tsx[90m:5[0m
+
+[2026-11-08T10:06:51.7218463+08:00] FATAL: System.Management.Automation.RuntimeException: Verification failed with npm exit code 1. Review the first TypeScript/test/build error in logs/launcher.log.
+[2026-11-08T10:12:11.7798872+08:00] lens-lab@0.2.2 C:\Users\Ryan Caspillo\Downloads\lens-lab
++-- @types/node@26.6.6
++-- @types/react-dom@19.3.0
++-- @types/react@19.3.0
++-- @vitejs/plugin-react@6.2.1
++-- lucide-react@1.70.0
++-- react-dom@19.3.1
++-- react@19.3.1
++-- typescript@7.0.2
++-- vite@8.3.6
++-- vitest@5.1.0
+`-- zustand@5.1.0
+
+[2026-11-08T10:12:23.5794176+08:00] 
+> lens-lab@0.2.2 verify
+> npm run typecheck && npm test && vite build
+
+
+> lens-lab@0.2.2 typecheck
+> tsc -b --pretty
+
+
+> lens-lab@0.2.2 test
+> vitest run
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv5.1.0 [39m[90mC:/Users/Ryan Caspillo/Downloads/lens-lab[39m
+
+ [32mΓ£ô[39m src/engine/photoLab.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/exposure.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/presets.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m3 passed[39m[22m[90m (3)[39m
+[2m      Tests [22m [1m[32m20 passed[39m[22m[90m (20)[39m
+[2m   Start at [22m 10:12:18
+[2m   Duration [22m 934ms[2m (transform 62%, import 20%, tests 9%, worker 9%)[22m
+
+[36mvite v8.3.6 [32mbuilding client environment for production...[36m[39m
+transforming...
+Γ£ô 2078 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.76 kB Γöé gzip:   0.42 kB
+dist/assets/index-BV1fQFg6.css   46.23 kB Γöé gzip:  10.21 kB
+dist/assets/index-DAjTY7he.js   338.33 kB Γöé gzip: 102.97 kB
+
+[32mΓ£ô built in 2.29s[39m
+[2026-11-08T11:44:15.7122717+08:00] Existing package-lock.json could not be parsed: Cannot process argument because the value of argument "name" is not valid. Change the value of the "name" argument and run the operation again.. npm install will regenerate a valid lockfile.
+[2026-11-08T11:44:24.1120622+08:00] lens-lab@0.4.0 C:\Users\Ryan Caspillo\Downloads\lens-lab
++-- @types/node@26.6.6
++-- @types/react-dom@19.3.0
++-- @types/react@19.3.0
++-- @vitejs/plugin-react@6.2.1
++-- lucide-react@1.70.0
++-- react-dom@19.3.1
++-- react@19.3.1
++-- typescript@7.0.2
++-- vite@8.3.6
++-- vitest@5.1.0
+`-- zustand@5.1.0
+
+[2026-11-08T11:44:26.7503786+08:00] 
+up to date in 2s
+[2026-11-08T11:44:29.0190376+08:00] lens-lab@0.4.0 C:\Users\Ryan Caspillo\Downloads\lens-lab
++-- @types/node@26.6.6
++-- @types/react-dom@19.3.0
++-- @types/react@19.3.0
++-- @vitejs/plugin-react@6.2.1
++-- lucide-react@1.70.0
++-- react-dom@19.3.1
++-- react@19.3.1
++-- typescript@7.0.2
++-- vite@8.3.6
++-- vitest@5.1.0
+`-- zustand@5.1.0
+
+[2026-11-08T11:44:37.6527277+08:00] 
+> lens-lab@0.4.0 verify
+> npm run typecheck && npm test && vite build
+
+
+> lens-lab@0.4.0 typecheck
+> tsc -b --pretty
+
+
+> lens-lab@0.4.0 test
+> vitest run
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv5.1.0 [39m[90mC:/Users/Ryan Caspillo/Downloads/lens-lab[39m
+
+ [31mΓ¥»[39m src/engine/recipes.test.ts [2m([22m[2m6 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 45[2mms[22m[39m
+   [31mΓ¥»[39m Photo Lab shot recipes [2m(6)[22m
+     [32mΓ£ô[39m serializes a readable TXT file and parses its settings[32m 8[2mms[22m[39m
+     [32mΓ£ô[39m creates immutable revisions rather than overwriting the previous snapshot[32m 4[2mms[22m[39m
+     [32mΓ£ô[39m exports and imports all immutable revision snapshots in the portable TXT bundle[32m 3[2mms[22m[39m
+     [32mΓ£ô[39m restores an earlier revision as a new revision[32m 2[2mms[22m[39m
+[31m     [31m├ù[31m rejects unsupported schemas, invalid camera settings, and out-of-range adjustments[39m[32m 23[2mms[22m[39m
+     [32mΓ£ô[39m rejects malformed or oversized recipe documents[32m 2[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/exposure.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/photoAnalysis.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 42[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/presets.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 27[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/lensMath.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/photoLab.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+System.Management.Automation.RemoteException
+[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m[1m[41m Failed Tests 1 [49m[22m[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m
+System.Management.Automation.RemoteException
+[41m[1m FAIL [22m[49m src/engine/recipes.test.ts[2m > [22mPhoto Lab shot recipes[2m > [22mrejects unsupported schemas, invalid camera settings, and out-of-range adjustments
+[31m[1mAssertionError[22m: expected [Function] to throw error including 'must be positive' but got 'Camera settings must use positive apeΓÇª'[39m
+System.Management.Automation.RemoteException
+Expected: [32m"must [7mb[27me positive"[39m
+Received: [31m"[7mCamera settings [27mmust [7mus[27me positive[7m aperture, shutter, ISO, focal length, and focus distance values.[27m"[39m
+System.Management.Automation.RemoteException
+[36m [2mΓ¥»[22m src/engine/recipes.test.ts:[2m87:94[22m[39m
+    [90m 85|[39m     [35mconst[39m invalidCamera [33m=[39m [33mJSON[39m[33m.[39m[34mparse[39m(text[33m.[39m[34mslice[39m(text[33m.[39m[34mindexOf[39m([32m"{"[39m)))[33m;[39m
+    [90m 86|[39m     invalidCamera[33m.[39mcameraSettings[33m.[39miso [33m=[39m [34m0[39m[33m;[39m
+    [90m 87|[39m     expect(() => parsePhotoRecipe(`LENS LAB SHOT RECIPE\n${JSON.stringΓÇª
+    [90m   |[39m                                                                                              [31m^[39m
+    [90m 88|[39m     const invalidAdjustment = JSON.parse(text.slice(text.indexOf("{"))ΓÇª
+    [90m 89|[39m     invalidAdjustment[33m.[39madjustments[33m.[39mexposure [33m=[39m [34m20[39m[33m;[39m
+System.Management.Automation.RemoteException
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[1/1]ΓÄ»[22m[39m
+System.Management.Automation.RemoteException
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m5 passed[39m[22m[90m (6)[39m
+[2m      Tests [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m35 passed[39m[22m[90m (36)[39m
+[2m   Start at [22m 11:44:35
+[2m   Duration [22m 1.51s[2m (transform 50%, import 26%, tests 15%, worker 9%)[22m
+
+[2m    Isolate [22m [33m6 workers spawned[39m[2m ┬╖ ~519ms startup each (spawn + environment, per file)[22m
+[2m            [22m [2mat least ~519ms faster with [22m[33misolate: false[39m[2m ΓÇö reuses workers across files instead of one per file[22m
+
+[2026-11-08T11:44:37.6707233+08:00] FATAL: System.Management.Automation.RuntimeException: Verification failed with npm exit code 1. Review the first TypeScript/test/build error in logs/launcher.log.
+[2026-11-08T11:45:23.9852128+08:00] Existing package-lock.json could not be parsed: Cannot process argument because the value of argument "name" is not valid. Change the value of the "name" argument and run the operation again.. npm install will regenerate a valid lockfile.
+[2026-11-08T11:45:26.3326190+08:00] lens-lab@0.4.0 C:\Users\Ryan Caspillo\Downloads\lens-lab
++-- @types/node@26.6.6
++-- @types/react-dom@19.3.0
++-- @types/react@19.3.0
++-- @vitejs/plugin-react@6.2.1
++-- lucide-react@1.70.0
++-- react-dom@19.3.1
++-- react@19.3.1
++-- typescript@7.0.2
++-- vite@8.3.6
++-- vitest@5.1.0
+`-- zustand@5.1.0
+
+[2026-11-08T11:45:28.6398232+08:00] 
+up to date in 2s
+[2026-11-08T11:45:30.7761348+08:00] lens-lab@0.4.0 C:\Users\Ryan Caspillo\Downloads\lens-lab
++-- @types/node@26.6.6
++-- @types/react-dom@19.3.0
++-- @types/react@19.3.0
++-- @vitejs/plugin-react@6.2.1
++-- lucide-react@1.70.0
++-- react-dom@19.3.1
++-- react@19.3.1
++-- typescript@7.0.2
++-- vite@8.3.6
++-- vitest@5.1.0
+`-- zustand@5.1.0
+
+[2026-11-08T11:45:35.9466100+08:00] 
+> lens-lab@0.4.0 verify
+> npm run typecheck && npm test && vite build
+
+
+> lens-lab@0.4.0 typecheck
+> tsc -b --pretty
+
+
+> lens-lab@0.4.0 test
+> vitest run
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv5.1.0 [39m[90mC:/Users/Ryan Caspillo/Downloads/lens-lab[39m
+
+ [32mΓ£ô[39m src/engine/presets.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 27[2mms[22m[39m
+ [31mΓ¥»[39m src/engine/recipes.test.ts [2m([22m[2m6 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 45[2mms[22m[39m
+   [31mΓ¥»[39m Photo Lab shot recipes [2m(6)[22m
+     [32mΓ£ô[39m serializes a readable TXT file and parses its settings[32m 8[2mms[22m[39m
+     [32mΓ£ô[39m creates immutable revisions rather than overwriting the previous snapshot[32m 4[2mms[22m[39m
+     [32mΓ£ô[39m exports and imports all immutable revision snapshots in the portable TXT bundle[32m 3[2mms[22m[39m
+     [32mΓ£ô[39m restores an earlier revision as a new revision[32m 1[2mms[22m[39m
+[31m     [31m├ù[31m rejects unsupported schemas, invalid camera settings, and out-of-range adjustments[39m[32m 22[2mms[22m[39m
+     [32mΓ£ô[39m rejects malformed or oversized recipe documents[32m 1[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/photoAnalysis.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 36[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/exposure.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/lensMath.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/photoLab.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+System.Management.Automation.RemoteException
+[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m[1m[41m Failed Tests 1 [49m[22m[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m
+System.Management.Automation.RemoteException
+[41m[1m FAIL [22m[49m src/engine/recipes.test.ts[2m > [22mPhoto Lab shot recipes[2m > [22mrejects unsupported schemas, invalid camera settings, and out-of-range adjustments
+[31m[1mAssertionError[22m: expected [Function] to throw error including 'must be positive' but got 'Camera settings must use positive apeΓÇª'[39m
+System.Management.Automation.RemoteException
+Expected: [32m"must [7mb[27me positive"[39m
+Received: [31m"[7mCamera settings [27mmust [7mus[27me positive[7m aperture, shutter, ISO, focal length, and focus distance values.[27m"[39m
+System.Management.Automation.RemoteException
+[36m [2mΓ¥»[22m src/engine/recipes.test.ts:[2m87:94[22m[39m
+    [90m 85|[39m     [35mconst[39m invalidCamera [33m=[39m [33mJSON[39m[33m.[39m[34mparse[39m(text[33m.[39m[34mslice[39m(text[33m.[39m[34mindexOf[39m([32m"{"[39m)))[33m;[39m
+    [90m 86|[39m     invalidCamera[33m.[39mcameraSettings[33m.[39miso [33m=[39m [34m0[39m[33m;[39m
+    [90m 87|[39m     expect(() => parsePhotoRecipe(`LENS LAB SHOT RECIPE\n${JSON.stringΓÇª
+    [90m   |[39m                                                                                              [31m^[39m
+    [90m 88|[39m     const invalidAdjustment = JSON.parse(text.slice(text.indexOf("{"))ΓÇª
+    [90m 89|[39m     invalidAdjustment[33m.[39madjustments[33m.[39mexposure [33m=[39m [34m20[39m[33m;[39m
+System.Management.Automation.RemoteException
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[1/1]ΓÄ»[22m[39m
+System.Management.Automation.RemoteException
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m5 passed[39m[22m[90m (6)[39m
+[2m      Tests [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m35 passed[39m[22m[90m (36)[39m
+[2m   Start at [22m 11:45:34
+[2m   Duration [22m 1.07s[2m (import 40%, tests 25%, transform 18%, worker 16%)[22m
+
+[2m    Isolate [22m [33m6 workers spawned[39m[2m ┬╖ ~378ms startup each (spawn + environment, per file)[22m
+[2m            [22m [2mat least ~378ms faster with [22m[33misolate: false[39m[2m ΓÇö reuses workers across files instead of one per file[22m
+
+[2026-11-08T11:45:35.9636079+08:00] FATAL: System.Management.Automation.RuntimeException: Verification failed with npm exit code 1. Review the first TypeScript/test/build error in logs/launcher.log.
+[2026-11-08T12:11:59.4043345+08:00] Existing package-lock.json belongs to version 0.4.0; package.json is 0.4.2. npm install will reconcile the lockfile without blindly deleting installed dependencies.
+[2026-11-08T12:12:02.4723314+08:00] lens-lab@0.4.2 C:\Users\Ryan Caspillo\Downloads\lens-lab
++-- @types/node@26.6.6
++-- @types/react-dom@19.3.0
++-- @types/react@19.3.0
++-- @vitejs/plugin-react@6.2.1
++-- lucide-react@1.70.0
++-- react-dom@19.3.1
++-- react@19.3.1
++-- typescript@7.0.2
++-- vite@8.3.6
++-- vitest@5.1.0
+`-- zustand@5.1.0
+
+[2026-11-08T12:12:05.8362217+08:00] 
+up to date in 3s
+[2026-11-08T12:12:08.4878186+08:00] lens-lab@0.4.2 C:\Users\Ryan Caspillo\Downloads\lens-lab
++-- @types/node@26.6.6
++-- @types/react-dom@19.3.0
++-- @types/react@19.3.0
++-- @vitejs/plugin-react@6.2.1
++-- lucide-react@1.70.0
++-- react-dom@19.3.1
++-- react@19.3.1
++-- typescript@7.0.2
++-- vite@8.3.6
++-- vitest@5.1.0
+`-- zustand@5.1.0
+
+[2026-11-08T12:12:20.0317278+08:00] 
+> lens-lab@0.4.2 verify
+> npm run typecheck && npm test && vite build
+
+
+> lens-lab@0.4.2 typecheck
+> tsc -b --pretty
+
+
+> lens-lab@0.4.2 test
+> vitest run
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv5.1.0 [39m[90mC:/Users/Ryan Caspillo/Downloads/lens-lab[39m
+
+ [32mΓ£ô[39m src/engine/presets.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 29[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/recipes.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/photoAnalysis.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 64[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/photoLab.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/lensMath.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/exposure.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m6 passed[39m[22m[90m (6)[39m
+[2m      Tests [22m [1m[32m39 passed[39m[22m[90m (39)[39m
+[2m   Start at [22m 12:12:14
+[2m   Duration [22m 1.68s[2m (transform 47%, import 26%, tests 14%, worker 12%)[22m
+
+[2m    Isolate [22m [33m6 workers spawned[39m[2m ┬╖ ~564ms startup each (spawn + environment, per file)[22m
+[2m            [22m [2mat least ~564ms faster with [22m[33misolate: false[39m[2m ΓÇö reuses workers across files instead of one per file[22m
+
+[36mvite v8.3.6 [32mbuilding client environment for production...[36m[39m
+transforming...
+Γ£ô 2085 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/assets/photoProcessor.worker-B3kTLRFa.js    0.68 kB
+dist/index.html                                  0.76 kB Γöé gzip:   0.42 kB
+dist/assets/index-DKhbsmcX.css                  60.85 kB Γöé gzip:  13.01 kB
+dist/assets/index-BQ5Ic1sO.js                  390.52 kB Γöé gzip: 117.93 kB
+
+[32mΓ£ô built in 3.01s[39m
+[2026-11-08T12:40:56.9186645+08:00] Existing package-lock.json belongs to version 0.4.2; package.json is 0.5.0. npm install will reconcile the lockfile without blindly deleting installed dependencies.
+[2026-11-08T12:40:59.8970024+08:00] lens-lab@0.5.0 C:\Users\Ryan Caspillo\Downloads\lens-lab
++-- @types/node@26.6.6
++-- @types/react-dom@19.3.0
++-- @types/react@19.3.0
++-- @vitejs/plugin-react@6.2.1
++-- lucide-react@1.70.0
++-- react-dom@19.3.1
++-- react@19.3.1
++-- typescript@7.0.2
++-- vite@8.3.6
++-- vitest@5.1.0
+`-- zustand@5.1.0
+
+[2026-11-08T12:41:02.5378477+08:00] 
+up to date in 2s
+[2026-11-08T12:41:04.9867998+08:00] lens-lab@0.5.0 C:\Users\Ryan Caspillo\Downloads\lens-lab
++-- @types/node@26.6.6
++-- @types/react-dom@19.3.0
++-- @types/react@19.3.0
++-- @vitejs/plugin-react@6.2.1
++-- lucide-react@1.70.0
++-- react-dom@19.3.1
++-- react@19.3.1
++-- typescript@7.0.2
++-- vite@8.3.6
++-- vitest@5.1.0
+`-- zustand@5.1.0
+
+[2026-11-08T12:41:08.0281723+08:00] 
+> lens-lab@0.5.0 verify
+> npm run typecheck && npm test && vite build
+
+
+> lens-lab@0.5.0 typecheck
+> tsc -b --pretty
+
+[96msrc/App.tsx[0m:[93m329[0m:[93m28[0m - [91merror[0m[90m TS2367: [0mThis comparison appears to be unintentional because the types 'SoundKind' and '"off"' have no overlap.
+
+[7m329[0m     playSound(requested && requested !== "off" ? requested : "slider", true, preferences.soundVolume);
+[7m   [0m [91m                           ~~~~~~~~~~~~~~~~~~~[0m
+
+
+Found 1 error in src/App.tsx[90m:329[0m
+
+[2026-11-08T12:41:08.0911703+08:00] FATAL: System.Management.Automation.RuntimeException: Verification failed with npm exit code 1. Review the first TypeScript/test/build error in logs/launcher.log.
+[2026-11-08T12:45:47.1222188+08:00] lens-lab@0.5.0 C:\Users\Ryan Caspillo\Downloads\lens-lab
++-- @types/node@26.6.6
++-- @types/react-dom@19.3.0
++-- @types/react@19.3.0
++-- @vitejs/plugin-react@6.2.1
++-- lucide-react@1.70.0
++-- react-dom@19.3.1
++-- react@19.3.1
++-- typescript@7.0.2
++-- vite@8.3.6
++-- vitest@5.1.0
+`-- zustand@5.1.0
+
+[2026-11-08T12:45:56.7891673+08:00] 
+> lens-lab@0.5.0 verify
+> npm run typecheck && npm test && vite build
+
+
+> lens-lab@0.5.0 typecheck
+> tsc -b --pretty
+
+
+> lens-lab@0.5.0 test
+> vitest run
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv5.1.0 [39m[90mC:/Users/Ryan Caspillo/Downloads/lens-lab[39m
+
+ [32mΓ£ô[39m src/engine/presets.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 30[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/recipes.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 27[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/photoAnalysis.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 64[2mms[22m[39m
+ [32mΓ£ô[39m src/utils/sound.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 48[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/photoLab.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/exposure.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/lensMath.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m7 passed[39m[22m[90m (7)[39m
+[2m      Tests [22m [1m[32m42 passed[39m[22m[90m (42)[39m
+[2m   Start at [22m 12:45:51
+[2m   Duration [22m 1.93s[2m (transform 51%, import 23%, tests 16%, worker 9%, environment 1%)[22m
+
+[2m    Isolate [22m [33m7 workers spawned[39m[2m ┬╖ ~477ms startup each (spawn + environment, per file)[22m
+[2m            [22m [2mat least ~636ms faster with [22m[33misolate: false[39m[2m ΓÇö reuses workers across files instead of one per file[22m
+
+[36mvite v8.3.6 [32mbuilding client environment for production...[36m[39m
+transforming...
+Γ£ô 2086 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/assets/photoProcessor.worker-B3kTLRFa.js    0.68 kB
+dist/index.html                                  1.44 kB Γöé gzip:   0.68 kB
+dist/assets/index-DMOTyqnC.css                  88.80 kB Γöé gzip:  17.75 kB
+dist/assets/index-mh4jHe9d.js                  400.22 kB Γöé gzip: 120.74 kB
+
+[32mΓ£ô built in 2.18s[39m
+[2026-11-08T13:20:19.7750771+08:00] lens-lab@0.5.1 C:\Users\Ryan Caspillo\Downloads\lens-lab
++-- @types/node@26.6.6
++-- @types/react-dom@19.3.0
++-- @types/react@19.3.0
++-- @vitejs/plugin-react@6.2.1
++-- lucide-react@1.70.0
++-- react-dom@19.3.1
++-- react@19.3.1
++-- typescript@7.0.2
++-- vite@8.3.6
++-- vitest@5.1.0
+`-- zustand@5.1.0
+
+[2026-11-08T13:20:28.1754007+08:00] 
+> lens-lab@0.5.1 verify
+> npm run typecheck && npm test && vite build
+
+
+> lens-lab@0.5.1 typecheck
+> tsc -b --pretty
+
+
+> lens-lab@0.5.1 test
+> vitest run
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv5.1.0 [39m[90mC:/Users/Ryan Caspillo/Downloads/lens-lab[39m
+
+ [32mΓ£ô[39m src/utils/sound.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 33[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/presets.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 30[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/photoAnalysis.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 67[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/recipes.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 29[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/exposure.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/photoLab.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 30[2mms[22m[39m
+ [32mΓ£ô[39m src/engine/lensMath.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m7 passed[39m[22m[90m (7)[39m
+[2m      Tests [22m [1m[32m42 passed[39m[22m[90m (42)[39m
+[2m   Start at [22m 13:20:24
+[2m   Duration [22m 1.54s[2m (import 40%, tests 28%, transform 18%, worker 13%, environment 1%)[22m
+
+[2m    Isolate [22m [33m7 workers spawned[39m[2m ┬╖ ~415ms startup each (spawn + environment, per file)[22m
+[2m            [22m [2mat least ~553ms faster with [22m[33misolate: false[39m[2m ΓÇö reuses workers across files instead of one per file[22m
+
+[36mvite v8.3.6 [32mbuilding client environment for production...[36m[39m
+transforming...
+Γ£ô 2087 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/assets/photoProcessor.worker-B3kTLRFa.js    0.68 kB
+dist/index.html                                  1.44 kB Γöé gzip:   0.68 kB
+dist/assets/index-Btjvul45.css                  98.31 kB Γöé gzip:  19.44 kB
+dist/assets/index-BYbL4jpO.js                  420.26 kB Γöé gzip: 127.57 kB
+
+[32mΓ£ô built in 1.14s[39m

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0c1015" />
+    <meta name="description" content="LENS LAB — a local-first interactive photography and DSLR simulation studio." />
+    <meta name="lens-lab-version" content="0.5.1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>LENS LAB — Photography Simulation Studio</title>
+    <link rel="icon" type="image/svg+xml" href="/lenslab-mark.svg" />
+    <script>
+      try {
+        const savedPreferences = JSON.parse(localStorage.getItem("lenslab-preferences-v1") || "{}");
+        const theme = savedPreferences && (savedPreferences.theme === "light" || savedPreferences.theme === "dark") ? savedPreferences.theme : "dark";
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+        const themeColor = document.querySelector('meta[name="theme-color"]');
+        if (themeColor) themeColor.content = theme === "light" ? "#f2f5f8" : "#0c1015";
+      } catch { /* Theme preference is optional; the default dark theme remains available. */ }
+    </script>
+    <script type="module" crossorigin src="/assets/index-BYbL4jpO.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Btjvul45.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+# LENS LAB PRESET
+# Example editable camera-settings snapshot.
+# Import this file from Presets -> IMPORT TXT.
+# Replace model IDs only with profile IDs available in your installation.
+{
+  "format": "lens-lab-preset",
+  "schemaVersion": 1,
+  "id": "example-portrait-soft-daylight",
+  "name": "Portrait — Soft Daylight",
+  "description": "A starting point for a still portrait in soft daylight. Adjust exposure for the actual scene.",
+  "version": 1,
+  "createdAt": "2026-11-07T00:00:00.000Z",
+  "updatedAt": "2026-11-07T00:00:00.000Z",
+  "cameraProfileId": "canon-eos-3000d-reference",
+  "lensProfileId": "generic-18-55",
+  "mode": "M",
+  "sceneId": "portrait",
+  "settings": {
+    "aperture": 5.6,
+    "shutter": 0.016666666666666666,
+    "iso": 400,
+    "focalLength": 50,
+    "focusDistance": 2.5,
+    "exposureCompensation": 0,
+    "focusMode": "AF-S"
+  }
+}
