@@ -116,3 +116,21 @@ See `docs/PHOTO-LAB.md` for the editor layout, processing model, recipe format, 
 - Lens Comparison workspace for focal length, field-of-view, aperture-limit, and depth-of-field estimates.
 
 See `docs/PHOTO-ANALYSIS.md` and `docs/LENS-COMPARISON.md` for limitations and usage.
+
+## Repository hygiene
+
+The repository tracks the application source and dependency lockfile, not local installations or generated output:
+
+- `node_modules/` is recreated with `npm ci`.
+- `dist/` is recreated by `npm run build`.
+- `logs/` contains local launcher/server logs and the local port marker; it is not part of the application source.
+- Local editor files, compiler metadata, and test output should remain untracked.
+
+For a clean development setup, install the pinned dependencies and run the verification commands:
+
+```bash
+npm ci
+npm run verify
+```
+
+Do not commit personal photographs, local captures, diagnostic logs, machine-specific paths, or credentials. Photo Lab content remains in the browser's local IndexedDB unless a user explicitly exports it.
