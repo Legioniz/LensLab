@@ -1,0 +1,15 @@
+# Dependencies and generated output
+node_modules/
+dist/
+logs/
+
+# Local tooling and caches
+.vite/
+*.tsbuildinfo
+coverage/
+playwright-report/
+test-results/
+
+# Operating-system files
+.DS_Store
+Thumbs.db
