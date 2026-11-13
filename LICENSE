@@ -1,52 +1,60 @@
-MIT License
+PROPRIETARY LICENSE — ALL RIGHTS RESERVED
 
-Copyright (c) 2026 Legionized
+Copyright © 2026 Legioniz. All rights reserved.
+Repository: LensLab
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+## 1. Materials covered
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+This license applies only to original source code, documentation, designs, graphics, project materials, and other work in this repository that Legioniz owns or is legally authorized to control ("Owner Materials").
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Copyright ownership is determined by applicable law and valid agreements, not merely by repository ownership, authorship labels, or this file. Materials owned by another person or entity are not Owner Materials.
 
-Personal Reference Repository
-This repository is maintained as a personal reference archive for learning, research, experimentation, and future reference. It is not intended to be presented as a commercial product, service, or official distribution.
+## 2. No general license
 
-Purpose
-The repository may contain personal notes, code examples, useful resources, documentation, links, experiments, and other materials collected or created for educational and reference purposes.
+No open-source, commercial, personal, or other general license is granted to Owner Materials. Except for access and platform permissions that GitHub itself grants under its Terms of Service, no person or organization is authorized to use Owner Materials without prior, express written permission from the lawful rights holder.
 
-Its purpose is to help organize knowledge and preserve useful references—not to claim ownership of other people's work or to imply endorsement of the materials included.
+Without that written permission, and to the fullest extent permitted by applicable law, you may not:
 
-Important Notice About the MIT License
-This repository currently includes the MIT License. The MIT License permits use, copying, modification, distribution, sublicensing, and sale of the software and associated materials covered by that license, provided the required copyright and permission notices are retained.
+- reproduce, copy, extract, or reuse Owner Materials;
+- modify, adapt, translate, merge, or create derivative works from Owner Materials;
+- redistribute, publish, republish, sublicense, sell, rent, or commercially exploit Owner Materials;
+- incorporate Owner Materials into another repository, product, service, dataset, model, or project;
+- deploy, publicly display, perform, or otherwise exploit Owner Materials; or
+- remove, obscure, or misrepresent ownership or copyright notices.
 
-Because of this, the repository's reference-only purpose is a statement of the maintainer's intent; it is not a legally enforceable non-commercial restriction under the standard MIT License. The README does not override or amend the LICENSE file.
+Viewing this repository does not grant a license to reuse its contents outside the permissions expressly provided by GitHub and applicable law. This repository is not offered under an open-source or public-domain license.
 
-If a strict prohibition on commercial use is required, the standard MIT License is not suitable. The license would need to be replaced with or supplemented by appropriately drafted terms before distribution. A license that prohibits commercial use is generally not considered an open-source license under the Open Source Initiative's definition.
+## 3. Public GitHub repository permissions
 
-Third-Party Materials
-Some materials may be included or referenced for educational and research purposes. Unless explicitly stated otherwise:
+While this repository is public, GitHub's Terms of Service grant other GitHub users certain platform-specific permissions, including the ability to view and fork the repository through GitHub functionality. This file does not and cannot override those platform terms.
 
-The original authors or rights holders retain ownership of their respective work.
-Third-party materials remain subject to their original licenses, terms, and copyright notices.
-The MIT License in this repository does not relicense third-party content that I do not own or have permission to license.
-Check the original source and its license before copying, modifying, redistributing, or using any referenced material.
-A link or reference does not imply affiliation with, sponsorship by, or endorsement from the original author or organization.
-Disclaimer
-Materials are provided for reference and educational purposes and are supplied "as is," without guarantees of accuracy, completeness, or suitability. Verify important information and dependencies against their original sources before relying on them.
+A GitHub fork or platform permission is not a separate grant from Legioniz to exploit, sell, republish, or use Owner Materials outside the scope permitted by GitHub's Terms of Service and applicable law. To restrict public viewing and forking more effectively, the repository must be made private through GitHub's repository visibility settings. Existing forks or copies may remain even after a visibility change.
 
-Attribution and Contributions
-Please preserve applicable copyright notices, license texts, author credits, and source links when using or sharing materials, as required by their respective licenses. Contributions or additions should identify their source and applicable license whenever possible.
+## 4. Written permission
 
-Maintained for personal learning and reference. The actual permissions and obligations for MIT-licensed materials are defined by the LICENSE file; third-party materials are governed by their own terms.
+Any permission beyond applicable legal exceptions and GitHub's platform-specific permissions must be granted in advance by the lawful rights holder in an explicit written authorization. The authorization must identify the covered materials, permitted purpose, scope, duration, and any conditions. No permission is implied by silence, public access, a fork, a clone, a download, or the absence of a response.
+
+## 5. Third-party and separately licensed materials
+
+This license does not replace, narrow, or transfer any third-party license or permission. Dependencies, frameworks, SDKs, fonts, icons, photographs, audio, datasets, trademarks, open-source components, user submissions, and other materials not owned or controlled by Legioniz remain subject to their own terms. Required notices and attributions must be retained. Where a third-party license conflicts with this notice, the third-party license governs the material it covers.
+
+## 6. Legal exceptions and limitations
+
+This license is subject to applicable law. It does not prohibit statutory exceptions, limitations, fair use, interoperability rights, or other uses that the lawful rights holder cannot legally restrict. Nothing in this notice purports to waive or remove a non-waivable legal right.
+
+## Change from the previous license
+
+The repository's previous revision included an MIT License notice naming Legionized as copyright holder. This proprietary notice replaces that license for Owner Materials in this and later revisions distributed under this notice, to the extent the relevant rights are controlled by Legioniz. It does not revoke, narrow, or retroactively alter MIT permissions already granted to recipients of earlier revisions or copies. Those earlier copies remain governed by the license accompanying them.
+
+## 7. No transfer of ownership
+
+No ownership, assignment, or implied license is transferred by this repository or this notice. All rights in Owner Materials not expressly granted by a valid written authorization remain reserved to their lawful rights holder.
+
+## 8. Permission and infringement inquiries
+
+To request permission or report suspected unauthorized use, contact the repository owner through the Legioniz GitHub account. Identify the files, proposed use, intended audience, distribution method, and duration of the requested permission.
+
+
+---
+
+This file is a proprietary rights notice and is not a substitute for a signed assignment, contributor agreement, third-party rights review, or advice from a qualified intellectual-property lawyer.
