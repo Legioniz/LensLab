@@ -33,13 +33,13 @@ Any permission beyond what applicable law allows without consent must be granted
 
 This notice is subject to applicable law. It does not eliminate statutory exceptions, limitations, fair-use rights, interoperability provisions, or other uses that the rights holder cannot legally prohibit. Nothing in this notice purports to restrict a right that applicable law makes non-waivable.
 
-## 5. Third-party and separately licensed material
+## 5. Current license, prior grants, and third-party materials
 
-## Existing license and third-party materials
+The root-level `LICENSE` file now sets proprietary, all-rights-reserved terms for Owner Materials in the current repository version and later versions distributed under that notice, to the extent the relevant rights are controlled by Legioniz.
 
-The repository already contains a root-level MIT `LICENSE`. That license expressly grants broad permissions for the software and other material it covers, subject to its conditions. This `COPYRIGHT.md` does **not** amend, revoke, narrow, or replace that grant. The MIT permissions remain applicable to material covered by that license, so this repository cannot honestly be described as exclusively usable by Legioniz while that grant remains applicable.
+The earlier repository version carried the MIT License. This change does not revoke, narrow, or retroactively alter permissions already granted to recipients of earlier versions or copies under that earlier license. Those recipients' rights in those earlier copies remain governed by the license that accompanied them. This notice does not establish ownership over material belonging to another person.
 
-This notice applies only to original material that Legioniz owns or is otherwise authorized to control, and does not claim ownership over third-party software, dependencies, fonts, icons, photographs, datasets, contributions, or other material belonging to someone else. Separate licenses and permissions continue to govern those materials.
+Dependencies, frameworks, fonts, icons, photographs, audio, datasets, trademarks, contributions, and other third-party materials remain subject to their respective owners' licenses and permissions. Required notices and attributions must be retained.
 
 ## 6. No transfer of rights
 
